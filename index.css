@@ -1,8 +1,11 @@
 .carta {
-  width: 60px;
-  height: 60px;
   margin: 5px;
   background-color: burlywood;
+}
+
+.fila {
+  height: 25vh;
+  padding: 5px;
 }
 
 .rojo {
@@ -16,6 +19,12 @@
 }
 .verde {
   background-color: green;
+}
+.naranja {
+  background-color: orange;
+}
+.negro {
+  background-color: black;
 }
 
 .bloquear {

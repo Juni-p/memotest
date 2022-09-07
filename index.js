@@ -1,9 +1,10 @@
 const $cartas = document.querySelectorAll(".carta");
 const $contenedorCartas = document.querySelector("main");
+const $jugar = document.querySelector("#jugar");
 
 let $primeraCartaSeleccionada = null;
 
-document.querySelector("#jugar").onclick = setearJuego;
+$jugar.onclick = setearJuego;
 
 $cartas.forEach(function ($carta) {
   $carta.onclick = function () {
@@ -55,9 +56,16 @@ function agregarColor($carta, color) {
 function eliminarColor($carta, color) {
   $carta.classList.remove(color);
 }
+function desactivarBoton() {
+  $jugar.disabled = true;
+}
+function activarBoton() {
+  $jugar.disabled = false;
+}
 
 function setearJuego() {
   desbloquearClicksUsuario();
+  desactivarBoton();
   const COLORES = ["rojo", "azul", "verde", "amarillo"];
   const coloresRepetidos = COLORES.concat(COLORES);
   mezclarColores(coloresRepetidos);
@@ -74,6 +82,7 @@ function mezclarColores(colores) {
 
 function analizarSiHayGanador() {
   if (document.querySelectorAll(".carta").length === 0) {
+    activarBoton();
     bloquearClicksUsuario();
     alert("Ganaste! para volver a jugar seleccione jugar nuevamente");
   }
