@@ -1,0 +1,22 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juni-p/memotest.git"
+  },
+  "author": "Junior Vitteri <vitteri81@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Juni-p/memotest/issues"
+  },
+  "homepage": "https://github.com/Juni-p/memotest#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
