@@ -25,9 +25,11 @@ $cartas.forEach(function ($carta) {
         eliminarCarta($carta);
         desbloquearClicksUsuario();
         analizarSiHayGanador();
+        $primeraCartaSeleccionada = null;
       }, MILISEGUNDOS_DELAY_JUGADA);
       return;
     }
+
     bloquearClicksUsuario();
     setTimeout(() => {
       eliminarColor($carta, color);
